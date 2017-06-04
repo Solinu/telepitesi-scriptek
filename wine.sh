@@ -3,6 +3,7 @@
 # Készítette: Winizsol
 # Licensz: GNU GPLv3
 
+clear
 echo "==================== Wine Telepítési Script ===================="
 echo "A telepítés követelményei:"
 echo " - Ubuntu vagy Ubuntu-alapú Linux-disztibúció (Linux Mint nem megfelelő)"
