@@ -39,7 +39,7 @@ then
     # Figyelmeztetés a Wine telepítése előtt
     echo "FIGYELMEZTETÉS"
     echo "Előfordulhat, hogy az apt problémázni fog nem telepített függőségek miatt. Ebben az esetben manuálisan kell telepíteni a függőségeket és ezért a Wine telepítés naplói nem kerülnek törlésre a Terminálból, de minden másé igen."
-    read -p "Nyomja meg Enter/Return gombot a folytatáshoz vagy a Ctrl+C billentyűkombinációt a megszakításhoz!"
+    read -p "Nyomja meg Enter/Return gombot a folytatáshoz vagy zárja be az ablakot a megszakításhoz!"
     # Terminál tartalmának törlése
     clear
     # GCC telepítése
