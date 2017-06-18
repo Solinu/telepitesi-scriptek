@@ -48,7 +48,7 @@ then
     # Terminál tartalmának törlése
     clear
     # A legújabb stabil Wine telepítése.
-    sudo apt install --install-recommends -y winehq-stable
+    sudo apt install --install-recommends -y wine-stable
     # Kitakarítás
     sudo apt autoremove -y
     # Vége
