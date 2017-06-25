@@ -10,7 +10,7 @@ echo "Szoftverek és betűjeleik listája: https://github.com/Winizsol/telepites
 read -p "Melyik szoftvert szeretné telepíteni? (betűjel) " choice
 case "$choice" in 
   a|A ) cd ~/winizsol && wget -O winehq https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/master/wine.sh && chmod +x winehq && ./winehq && chmod -x winehq;;
-  b|B ) cd ~/winizsol && wget -O lamp https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/master/lamp.sh && chmod +x lamp && ./lamp && chmod -x lamp;;
+  #b|B ) cd ~/winizsol && wget -O lamp https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/master/lamp.sh && chmod +x lamp && ./lamp && chmod -x lamp;;
   * ) echo "Érvénytelen válasz!";;
 esac
 
