@@ -1,4 +1,6 @@
-# Telepítési script-ek
-Magyar nyelvű telepítési script-ek GNU/Linux szoftverekhez.
+# Telepítési script-ek tesztelési eszközök
 
-A telepítési útmutatók a Wiki-n találhatóak.
+Ezekkel az eszközökkel lehet tesztelni különböző szoftvereket.
+Jelenleg elérhető:
+ - Apache
+ - PHP
