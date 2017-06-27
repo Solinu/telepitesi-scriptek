@@ -8,7 +8,6 @@ echo "LAMP Server Telepítési Script"
 echo "A telepítés követelményei:"
 echo " - Debian-alapú vagy Red Hat-alapú (legalább Red Hat 7.x) Linux-disztribúció"
 read -p "Szeretné telepíteni a LAMP Server-t? (y/n) " -n 1 -r
-echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	clear
@@ -69,9 +68,15 @@ then
 		# Belépés a létrehozott mappába
 		cd winizsol-testing
 		# Teszteléshez szükséges fájlok letöltése
-		sudo wget -O apache.html https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/master/eszkozok/apache_test.html
-		sudo wget -O php.php https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/master/eszkozok/php_test.php
-		sudo wget https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/master/eszkozok/style.css
+		sudo wget -O apache.html https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/eszk%C3%B6z%C3%B6k/apache_test.html
+		sudo wget -O php.php https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/eszk%C3%B6z%C3%B6k/php_test.php
+		sudo wget https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/eszk%C3%B6z%C3%B6k/style.css
+		cd ~
+		clear
+		echo "Tesztelési fájlok beszerezve. Hogy letesztelje az Apache-t, írja be egy böngészőbe: szervercim/winizsol-testing/apache.html Hogy letesztelje a PHP-t, írja be egy böngészőbe: szervercim/winizsol-testing/php.php"
+		echo "A telepítés befejeződött. Ha valamilyen probléma merülne fel, jelentse itt: https://github.com/Winizsol/telepitesi-scriptek/issues"
+		echo "Köszönöm, hogy a script-emet használta,"
+		echo "Winizsol."
 	elif [ "$(command -v yum)" ]; then
 		read -p "A telepítés során többször fog adatokat bekérni a telepítő. Ilyenkor kövesse a képernyőn megtalálható utasításokat! Szeretné folytatni? Ha igen, nyomja meg az Enter/Return billentyűt!"
 		# Repo-k frissítése
@@ -106,18 +111,18 @@ then
 		# Belépés a létrehozott mappába
 		cd winizsol-testing
 		# Teszteléshez szükséges fájlok letöltése
-		sudo curl -o apache.html -L https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/master/eszkozok/apache_test.html
-		sudo curl -o php.php -L https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/master/eszkozok/php_test.php
-		sudo curl -o style.css -L https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/master/eszkozok/style.css
+		sudo curl -o apache.html -L https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/eszk%C3%B6z%C3%B6k/apache_test.html
+		sudo curl -o php.php -L https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/eszk%C3%B6z%C3%B6k/php_test.php
+		sudo curl -o style.css -L https://raw.githubusercontent.com/Winizsol/telepitesi-scriptek/eszk%C3%B6z%C3%B6k/style.css
+		cd ~
+		clear
+		echo "Tesztelési fájlok beszerezve. Hogy letesztelje az Apache-t, írja be egy böngészőbe: szervercim/winizsol-testing/apache.html Hogy letesztelje a PHP-t, írja be egy böngészőbe: szervercim/winizsol-testing/php.php"
+		echo "A telepítés befejeződött. Ha valamilyen probléma merülne fel, jelentse itt: https://github.com/Winizsol/telepitesi-scriptek/issues"
+		echo "Köszönöm, hogy a script-emet használta,"
+		echo "Winizsol."
 	else
 		echo "Sajnos a LAMP Szerver telepítő még nem elérhető erre a Linux-disztribúcióra vagy Ön nem egy Linux-disztribúciót használt!"
 	fi
-	cd ~
-	clear
-	echo "Tesztelési fájlok beszerezve. Hogy letesztelje az Apache-t, írja be egy böngészőbe: szervercim/winizsol-testing/apache.html Hogy letesztelje a PHP-t, írja be egy böngészőbe: szervercim/winizsol-testing/php.php"
-	echo "A telepítés befejeződött. Ha valamilyen probléma merülne fel, jelentse itt: https://github.com/Winizsol/telepitesi-scriptek/issues"
-	echo "Köszönöm, hogy a script-emet használta,"
-	echo "Winizsol."
 fi
 
 # Források:
